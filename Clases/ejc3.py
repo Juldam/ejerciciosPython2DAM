@@ -10,9 +10,24 @@ class Triangulo(object):
         lado3=l3
 
     def imprimirLadoMayor(self):
-        print("hola")
+        if int(l1) > int(l2):
+            if int(l1) > int(l3):
+                print("El lado mayor es el "+str(l1))
+            else:
+                print("El lado mayor es el "+str(l3))
+        elif int(l2) > int(l3):
+            print("El lado mayor es el "+str(l2))
+        else:
+            print("El lado mayor es el "+str(l3))
+
+
     def tipodeTriangulo(self):
-        print("hola")
+        if l1==l2 and l2==l3:
+            print("El triángulo es equilátero")
+        elif l1==l2 or l2==l3 or l1==l3:
+            print("El triángulo es isósceles")
+        elif l1!=l2 and l3!=l2 and l1!=l3:
+            print("El triángulo es escaleno")
 
 
 
@@ -27,8 +42,13 @@ while(True):
         print("Esos valores no son válidos, vuelva a intentarlo de nuevo")
 
 while(True):
-    r=str(input("Escoja una opción: \na) Saber el lado mayor\nb) Saber el tipo de triangulo c)Salir"))
+    r=str(input("Escoja una opción: \na) Saber el lado mayor\nb) Saber el tipo de triangulo \nc)Salir"))
     if r =="a":
         t.imprimirLadoMayor()
     elif r=="b":
         t.tipodeTriangulo()
+    elif r=="c":
+        print("Hasta otra")
+        break
+    else:
+        print("Debe escoger una opción válida. Inténtelo de nuevo.")
