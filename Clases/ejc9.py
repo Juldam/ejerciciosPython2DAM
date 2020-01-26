@@ -39,23 +39,21 @@ class Motocicleta(Bicicleta):
 
 def catalogar(listaVehic, ruedas=-1):
     if ruedas==-1:
-        #for i in listaVehic
         for i in quitarDuplicados(listaVehic):
-            #print("Clase: "+i.__class__.__name__)#PARA MOSTRAR EL NOMBRE DE LA CLASE
             print("Clase: "+i)
     else:
         print("Con ese número de ruedas tenemos las siguientes clases:")
-        #for i in listaVehic:
-        for i in quitarDuplicadosRuedas(listaVehic, ruedas):
-                #print("Clase: "+i.__class__.__name__)
+        lista, numautos=quitarDuplicadosRuedas(listaVehic, ruedas)
+        for i in lista:
                 print("Clase: "+i)
+        print("Se han encontrado " + str(numautos) + " vehículos con " + str(ruedas) + " ruedas.")
 
 
 def quitarDuplicados(lista):
     listaSinRepetidos=[]
     for i in lista:
         if i.__class__.__name__ not in listaSinRepetidos:
-            listaSinRepetidos.append(i.__class__.__name__)
+            listaSinRepetidos.append(i.__class__.__name__) #PARA MOSTRAR EL NOMBRE DE LA CLASE
     return listaSinRepetidos
 
 def quitarDuplicadosRuedas(lista, numruedas):
@@ -66,8 +64,8 @@ def quitarDuplicadosRuedas(lista, numruedas):
             cont=cont+1
             if i.__class__.__name__ not in listaSinRepetidos:
                 listaSinRepetidos.append(i.__class__.__name__)
-    print("Se han encontrado "+str(cont)+" vehículos con "+str(numruedas)+" ruedas.")
-    return listaSinRepetidos
+
+    return listaSinRepetidos, cont #PODEMOS HACER QUE EL MÉTODO DEVUELVA DOS ARGUMENTOS
 
 cocheUno=Coche("rojo", 4, 120, 100)
 camionetaUno=Camioneta("azul", 4, 100, 80, 900)
