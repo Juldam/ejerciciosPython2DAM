@@ -1,0 +1,3 @@
+Los pacientes menores de 20 años y sin diabetes son:
+- Eva
+- Esteban
