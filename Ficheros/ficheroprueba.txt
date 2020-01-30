@@ -1,0 +1,4 @@
+Esto es un texto de prueba 
+para ver en Python que linea tiene más carácteres
+y así salir de dudas
+de como hacer un ejercicio de estos.
