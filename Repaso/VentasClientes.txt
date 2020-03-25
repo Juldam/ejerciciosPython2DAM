@@ -1,0 +1,8 @@
+CLIENTE: 1 - Jorge Blanco Dominguez
+VENTAS: 
+1/2/GoodYear/pantanero/264.0/SI
+3/3/GoodYear/pantanero/132.0/SI
+CLIENTE: 2 - Jose Maria Polanco Santos
+VENTAS: 
+2/1/GoodYear/pantanero/396.00000000000006/NO
+4/4/GoodYear/pantanero/264.0/NO
